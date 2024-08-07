@@ -1,6 +1,11 @@
 @font-face{
-    font-family: "Font Name";
-    src: url("../fonts/font-name.ttf") format("truetype");
+    font-family: "Comodo";
+    src: url("./fonts/Comodo\ Regular\ Free.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
   }
 
 *{
@@ -48,6 +53,8 @@ h1{
     text-align: center;
     font-size: 880%;
     color: var(--white);
+    font-family: Comodo;
+    font-weight: 200;
 }
 
 .centro{
