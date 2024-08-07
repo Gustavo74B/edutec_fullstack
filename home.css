@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --sonichedgehog: #0000CD;
+    --hollowpurple: #a729f5;
+    --white:#fff;
+}
+
+.barra{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, var(--sonichedgehog) , var(--hollowpurple));
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+h1{
+    text-align: center;
+    font-size: 880%;
+    color: var(--white);
+}
+
+.centro{
+    text-align: center;
+}
+
+h2{
+    font-size: 440%;
+    color: var(--white);
+}
