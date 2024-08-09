@@ -8,6 +8,14 @@
     src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
   }
 
+
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -64,4 +72,4 @@ h1{
 h2{
     font-size: 440%;
     color: var(--white);
-}
+}""
