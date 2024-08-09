@@ -8,12 +8,7 @@
     src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
   }
 
-
-@font-face {
-    font-family: ;
-    src: url();
-}
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,17 +18,17 @@
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
     --white: #fff;
-    --blue-square: rgba(0, 0, 205, 0.7); /* Azul opaco */
+    --blue-square: rgba(0, 0, 205, 0.7);
 }
 
 body {
-    height: 200vh; /* Aumenta a altura da página */
+    height: 200vh;
     margin: 0;
     background: url('./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: flex-start; /* Alinha os itens ao início da página */
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .barra {
@@ -50,8 +45,8 @@ body {
     font-family: 'Geologica', sans-serif;
     font-weight: 500;
     text-align: center;
-    margin-top: 300px; /* Compensa a barra fixa */
-    z-index: 5; /* Garante que o texto esteja sobre a imagem de fundo */
+    margin-top: 300px;
+    z-index: 5;
 }
 
 h1 {
@@ -65,32 +60,32 @@ h2 {
 }
 
 .bloco {
-    margin-top: 80vh; /* Ajuste conforme necessário */
+    margin-top: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px; /* Ajuste a altura do bloco se necessário */
-    position: relative; /* Necessário para posicionar o quadrado dentro */
+    height: 450px;
+    position: relative;
 }
 
 .quadrado {
-    width: 1150px; /* Ajuste o tamanho do quadrado */
-    height: 450px; /* Ajuste o tamanho do quadrado */
-    background-color: var(--blue-square); /* Quadrado azul opaco */
-    background-image: url('./images/sua-imagem.jpg'); /* Adicione a imagem de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir o quadrado */
-    background-position: center; /* Centraliza a imagem */
-    color: var(--white); /* Cor do texto dentro do quadrado */
+    width: 1150px;
+    height: 450px;
+    background-color: var(--blue-square);
+    background-image: url('./images/sua-imagem.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
     display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    padding: 0 20px; /* Espaçamento interno, ajuste conforme necessário */
+    justify-content: flex-end;
+    align-items: center;
+    padding:  20px;
     position: relative;
 }
 
 .texto {
     font-family: 'Geologica', sans-serif;
     font-weight: 500;
-    text-align: right; /* Alinha o texto à direita */
-    z-index: 10; /* Garante que o texto esteja sobre a imagem de fundo */
+    text-align: right;
+    z-index: 10;
 }
