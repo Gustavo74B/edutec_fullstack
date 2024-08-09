@@ -13,63 +13,84 @@
     font-family: ;
     src: url();
 }
-
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-:root{
+:root {
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
-    --white:#fff;
+    --white: #fff;
+    --blue-square: rgba(0, 0, 205, 0.7); /* Azul opaco */
 }
 
-.barra{
+body {
+    height: 200vh; /* Aumenta a altura da página */
+    margin: 0;
+    background: url('./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens ao início da página */
+}
+
+.barra {
     width: 100%;
     height: 100px;
-    background: linear-gradient(to right, var(--sonichedgehog) , var(--hollowpurple));
+    background: linear-gradient(to right, var(--sonichedgehog), var(--hollowpurple));
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
-body{
+.centro {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 300px; /* Compensa a barra fixa */
+    z-index: 5; /* Garante que o texto esteja sobre a imagem de fundo */
+}
+
+h1 {
+    font-size: 440%;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 220%;
+    color: var(--white);
+}
+
+.bloco {
+    margin-top: 80vh; /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 450px; /* Ajuste a altura do bloco se necessário */
+    position: relative; /* Necessário para posicionar o quadrado dentro */
 }
 
-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg) no-repeat center center;
-    background-size: cover;
-    z-index: -1;
+.quadrado {
+    width: 1150px; /* Ajuste o tamanho do quadrado */
+    height: 450px; /* Ajuste o tamanho do quadrado */
+    background-color: var(--blue-square); /* Quadrado azul opaco */
+    background-image: url('./images/sua-imagem.jpg'); /* Adicione a imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir o quadrado */
+    background-position: center; /* Centraliza a imagem */
+    color: var(--white); /* Cor do texto dentro do quadrado */
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    padding: 0 20px; /* Espaçamento interno, ajuste conforme necessário */
+    position: relative;
 }
 
-h1{
-    text-align: center;
-    font-size: 880%;
-    color: var(--white);
-    font-family: Comodo;
-    font-weight: 200;
+.texto {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    text-align: right; /* Alinha o texto à direita */
+    z-index: 10; /* Garante que o texto esteja sobre a imagem de fundo */
 }
-
-.centro{
-    text-align: center;
-}
-
-h2{
-    font-size: 440%;
-    color: var(--white);
-}""
