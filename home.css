@@ -8,7 +8,10 @@
     src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
   }
 
-  * {
+/* home.css */
+
+/* Reseta margens e preenchimentos padrões */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,11 +21,12 @@
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
     --white: #fff;
-    --blue-square: rgba(0, 0, 205, 0.7);
+    --cinza-square: rgba(86, 86, 86, 0.83);
 }
 
 body {
-    height: 200vh;
+    height: auto;
+    min-height: 20vh;
     margin: 0;
     background: url('./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -33,12 +37,40 @@ body {
 
 .barra {
     width: 100%;
-    height: 100px;
+    height: 70px;
     background: linear-gradient(to right, var(--sonichedgehog), var(--hollowpurple));
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
     z-index: 10;
+}
+
+.logo {
+    height: 50px; /* Ajuste conforme necessário */
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 150px; /* Espaço entre os itens */
+    margin: 0 auto; /* Centraliza o menu horizontalmente */
+    flex: 1;
+    justify-content: center; /* Centraliza os itens dentro do menu */
+}
+
+.menu a {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem; /* Ajuste conforme necessário */
+}
+
+.menu a:hover {
+    text-decoration: underline;
 }
 
 .centro {
@@ -69,23 +101,94 @@ h2 {
 }
 
 .quadrado {
-    width: 1150px;
-    height: 450px;
-    background-color: var(--blue-square);
-    background-image: url('./images/sua-imagem.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+    width: 1220px;
+    height: 495px;
+    background-color: var(--cinza-square);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding:  20px;
+    padding: 0;
     position: relative;
 }
 
+.imagem {
+    width: 50%;
+    height: 100%;
+    background-image: url('./images/trabalhodolaisu.png');
+    background-size: cover;
+    background-position: center;
+}
+
 .texto {
+    width: 50%;
     font-family: 'Geologica', sans-serif;
     font-weight: 500;
     text-align: right;
-    z-index: 10;
+    padding: 20px;
+    color: var(--white);
+    box-sizing: border-box;
+}
+
+.bloco-miniaturas {
+    margin-top: 50px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajuste conforme necessário */
+    padding: 20px;
+}
+
+.quadrado-miniaturas {
+    width: 1220px; 
+    height: 495px; 
+    background-color: var(--cinza-square);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.titulo {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 900;
+    color: var(--white);
+    font-size: 4rem; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center;
+}
+
+.miniaturas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: calc(100% - 60px); /* Ajuste para considerar o padding e o título */
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+.miniatura {
+    text-align: center;
+    width: 180px; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.miniatura img {
+    width: 100%; /* Ajuste conforme necessário para definir o tamanho da imagem */
+    height: auto;
+}
+
+.miniatura p {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+
+.logo-link {
+    display: flex; /* Para garantir que o link envolva corretamente o logo */
+    align-items: center;
 }
