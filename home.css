@@ -6,7 +6,7 @@
 @font-face{
     font-family: "Montserrat";
     src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
-}
+  }
 
 /* home.css */
 
@@ -116,27 +116,12 @@ h2 {
 
 .texto {
     width: 50%;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 500;
     text-align: right;
     padding: 20px;
     color: var(--white);
     box-sizing: border-box;
-}
-
-.texto>h1{
-    position: relative;
-    top: -100px;
-}
-
-.texto>h1, .texto>p{
-    position: relative;
-    right: -50px;
-}
-
-.texto, .quadrado>img{
-    position: relative;
-    left: 50px;
 }
 
 .bloco-miniaturas {
