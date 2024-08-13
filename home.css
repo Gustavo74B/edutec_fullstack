@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comodo', sans-serif;
 }
 
 :root {
@@ -35,34 +36,29 @@ body {
     justify-content: flex-start;
 }
 
-.barra {
+header { 
     width: 100%;
     height: 70px;
     background: linear-gradient(to right, var(--sonichedgehog), var(--hollowpurple));
     position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    z-index: 10;
+    padding: 0;
 }
 
 .logo {
-    height: 50px; /* Ajuste conforme necessário */
-    margin-right: 20px;
+    height: 125px; /* Ajuste conforme necessário */
 }
 
 .menu {
     display: flex;
-    gap: 150px; /* Espaço entre os itens */
+    gap: 100px; /* Espaço entre os itens */
     margin: 0 auto; /* Centraliza o menu horizontalmente */
     flex: 1;
     justify-content: center; /* Centraliza os itens dentro do menu */
 }
 
 .menu a {
-    font-family: 'Geologica', sans-serif;
     font-weight: 500;
     color: var(--white);
     text-decoration: none;
