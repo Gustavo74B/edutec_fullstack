@@ -21,6 +21,8 @@
     --hollowpurple: #a729f5;
     --white: #fff;
     --cinza-square: rgba(86, 86, 86, 0.83);
+    --voce_sabia: #7B3D85;
+    --conhece_sistema: #232D8D;
 }   
 /* Estilos gerais */
 body {
@@ -49,7 +51,7 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 125px;
 }
 
 .menu {
@@ -103,7 +105,18 @@ h2 {
     width: 100%;
     max-width: 1200px;
     height: 495px;
-    background-color: var(--cinza-square);
+    background-color: var(--voce_sabia);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+.quadrado_2 {
+    width: 100%;
+    max-width: 1200px;
+    height: 495px;
+    background-color: var(--conhece_sistema);
     display: flex;
     align-items: center;
     padding: 0;
