@@ -154,3 +154,32 @@ body {
     transform: translate(-50%, -50%); /* Ajusta o posicionamento para centralizar o quadrado */
     z-index: -1; /* Garante que o quadrado fique atrás do conteúdo */
 }
+
+.final-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 40px; /* Adiciona 40px de margem inferior */
+    gap: 40px; /* Espaço entre o texto e o botão */
+    font-family: 'Montserrat', sans-serif; /* Alinhamento de fonte com o restante do site */
+    font-size: 1.8rem; /* Ajuste conforme necessário */
+    color: var(--white); /* Cor do texto */
+}
+
+.quiz-button {
+    background-color: var(--hollowpurple); /* Cor de fundo roxa */
+    color: var(--white); /* Cor do texto */
+    border: 2px solid var(--white); /* Borda branca */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 25px; /* Borda arredondada */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.5rem; /* Ajuste conforme necessário */
+}
+
+.quiz-button:hover {
+    background-color: var(--white); /* Muda a cor de fundo para branco ao passar o mouse */
+    color: var(--hollowpurple); /* Muda a cor do texto para roxa ao passar o mouse */
+    border-color: var(--hollowpurple); /* Muda a cor da borda para roxa */
+    cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
+}
