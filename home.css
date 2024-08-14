@@ -19,17 +19,9 @@
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
     --white: #fff;
-<<<<<<< HEAD
-    --cinza-square: rgba(86, 86, 86, 0.83);
-    --voce_sabia: #7B3D85;
-    --conhece_sistema: #232D8D;
-}   
-/* Estilos gerais */
-=======
     --cinza-square: rgba(0, 0, 0, 0.678);
 }
 
->>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
 body {
     max-width: 1440px; /* Define a largura máxima do conteúdo */
     margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
@@ -55,11 +47,7 @@ body {
 }
 
 .logo {
-<<<<<<< HEAD
-    height: 125px;
-=======
     height: 120px; /* Ajuste a altura para coincidir com a barra */
->>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
 }
 
 .menu {
@@ -111,26 +99,9 @@ h2 {
 
 .quadrado {
     width: 100%;
-<<<<<<< HEAD
-    max-width: 1200px;
-    height: 495px;
-    background-color: var(--voce_sabia);
-    display: flex;
-    align-items: center;
-    padding: 0;
-    position: relative;
-}
-
-.quadrado_2 {
-    width: 100%;
-    max-width: 1200px;
-    height: 495px;
-    background-color: var(--conhece_sistema);
-=======
     max-width: 1400px;
     height: 600px;
     background-color: var(--cinza-square);
->>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
     display: flex;
     align-items: center;
     padding: 0;
@@ -155,7 +126,7 @@ h2 {
     padding: 20px;
     color: var(--white);
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
 }
 
 .bloco-miniaturas {
@@ -194,7 +165,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
     width: 100%;
     max-height: calc(100% - 60px);
     overflow-y: auto;
@@ -206,6 +177,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .miniatura img {
@@ -216,19 +188,21 @@ h2 {
 
 .miniatura p {
     font-family: 'Geologica', sans-serif;
-    font-weight:500;
+    font-weight: 700;
     color: var(--white);
     margin-top: 40px;
+    font-size: 1.5rem; 
 }
 
 .descricao {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-top: 80px;
     max-width: 800px;
+    font-size: 1.5rem; 
 }
 
 .logo-link {
@@ -236,5 +210,3 @@ h2 {
     align-items: center;
     height: 70px; /* Mantém o alinhamento vertical com o header */
 }
-
-

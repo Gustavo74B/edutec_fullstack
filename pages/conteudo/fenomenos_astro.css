@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Comodo";
-    src: url("./fonts/Comodo\ Regular\ Free.ttf") format("truetype");
+    src: url("./fonts/Comodo Regular Free.ttf") format("truetype");
 }
 
 @font-face{
@@ -68,26 +68,6 @@ body {
     text-decoration: underline;
 }
 
-
-.bloco {
-    margin-top: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    position: relative;
-}
-
-.quadrado {
-    width: 1220px;
-    height: 495px;
-    background-color: var(--cinza-square);
-    display: flex;
-    align-items: center;
-    padding: 0;
-    position: relative;
-}
-
 .titulo{
     font-size: 220%;
     text-align: center;
@@ -96,18 +76,13 @@ body {
 }
 
 .texto {
-    width: 50%;
-    font-family: Montserrat;
+    width: 50%; /* Ajusta a largura do texto conforme necessário */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    text-align: right;
+    text-align: left; /* Alinha o texto à esquerda */
     padding: 20px;
     color: var(--white);
     box-sizing: border-box;
-}
-
-.texto{
-    position: relative;
-    right: -600px;
 }
 
 .texto h5{
@@ -117,13 +92,12 @@ body {
 
 .eclipse {
     display: flex;
-    justify-content: flex-start; /* Alinha a imagem e o texto para a esquerda */
+    justify-content: space-between; /* Espaça o texto e a imagem para os lados opostos */
     align-items: center; /* Centraliza verticalmente */
+    padding: 30px; /* Adiciona espaçamento interno */
 }
 
 .eclipse img {
-    position: relative;
-    right: 450px; /* Ajuste esse valor para mover a imagem para a esquerda */
-    width: 40%; /* Ajuste conforme necessário */
-    padding: 30px;
+    width: 40%; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-right: 200px; /* Espaço entre a imagem e o texto */
 }
