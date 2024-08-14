@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
     font-family: "Comodo";
     src: url("./fonts/Comodo Regular Free.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
     font-family: "Montserrat";
     src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
 }
@@ -18,18 +18,20 @@
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
     --white: #fff;
-    --cinza-square: rgba(86, 86, 86, 0.83);
+    --cinza-square: rgba(0, 0, 0, 0.678);
 }
 
 body {
     max-width: 1440px; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
-    padding-top: 70px;
+    margin: 0 auto; /* CENTRALIZA O CONTEÚDO E ADICIONA ESPAÇO NAS LATERAIS */
+    padding-top: 70px; /* ESPAÇO PARA A BARRA DE NAVEGAÇÃO */
     background: url('../../images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 100vh; /* GARANTE QUE O BODY TENHA NO MÍNIMO A ALTURA DA TELA */
+    overflow-x: hidden; /* EVITA ROLAGEM HORIZONTAL, SE NECESSÁRIO */
 }
 
 .barra {
@@ -41,19 +43,19 @@ body {
     left: 0;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px; /* ESPAÇO INTERNO NA BARRA DE NAVEGAÇÃO */
     z-index: 10;
 }
 
 .logo {
-    height: 120px; /* Ajuste a altura para coincidir com a barra */
+    height: 120px; /* AJUSTE A ALTURA PARA COINCIDIR COM A BARRA */
 }
 
 .menu {
     display: flex;
-    gap: 150px; /* Espaço entre os itens */
+    gap: 150px; /* ESPAÇO ENTRE OS ITENS DO MENU */
     flex: 1;
-    justify-content: center; /* Centraliza os itens dentro do menu */
+    justify-content: center; /* CENTRALIZA OS ITENS DENTRO DO MENU */
 }
 
 .menu a {
@@ -61,43 +63,94 @@ body {
     font-weight: 500;
     color: var(--white);
     text-decoration: none;
-    font-size: 1.2rem; /* Ajuste conforme necessário */
+    font-size: 1.2rem; /* AJUSTE CONFORME NECESSÁRIO */
 }
 
 .menu a:hover {
     text-decoration: underline;
 }
 
-.titulo{
+.titulo {
     font-size: 220%;
     text-align: center;
     color: var(--white);
-    padding-top: 120px;
+    padding-top: 70px; /* ESPAÇO SUFICIENTE PARA A BARRA DE NAVEGAÇÃO */
+    margin-bottom: 20px; /* ESPAÇO ABAIXO DO TÍTULO */
 }
 
-.texto {
-    width: 50%; /* Ajusta a largura do texto conforme necessário */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-align: left; /* Alinha o texto à esquerda */
-    padding: 20px;
-    color: var(--white);
-    box-sizing: border-box;
-}
 
-.texto h5{
-    font-size: 180%;
-    padding: 30px 0 30px 30px;
-}
-
-.eclipse {
+/* ESTILIZAÇÃO PARA AS SEÇÕES INDIVIDUAIS */
+.eclipse, .meteoros, .auroras, .eventos {
+    position: relative; /* Define o contexto de posicionamento para o pseudo-elemento */
     display: flex;
-    justify-content: space-between; /* Espaça o texto e a imagem para os lados opostos */
+    justify-content: space-between; /* Espaça a imagem e o texto para os lados opostos */
     align-items: center; /* Centraliza verticalmente */
-    padding: 30px; /* Adiciona espaçamento interno */
+    padding: 140px; /* Espaço interno na seção */
+    flex: 1; /* Permite que as seções ocupem espaço igual */
+    box-sizing: border-box; /* Inclui o padding e bordas no tamanho total do elemento */
 }
 
-.eclipse img {
-    width: 40%; /* Ajuste o tamanho da imagem conforme necessário */
-    margin-right: 200px; /* Espaço entre a imagem e o texto */
+.eclipse img, .meteoros img, .auroras img, .eventos img {
+    width: 40%; /* AJUSTA A LARGURA DA IMAGEM CONFORME NECESSÁRIO */
+}
+
+.eclipse .texto, .meteoros .texto, .auroras .texto, .eventos .texto {
+    width: 50%; /* AJUSTA A LARGURA DO TEXTO CONFORME NECESSÁRIO */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: left; /* ALINHA O TEXTO À ESQUERDA */
+    padding: 20px; /* ESPAÇO INTERNO NO TEXTO */
+    color: var(--white);
+    box-sizing: border-box; /* INCLUI O PADDING E BORDAS NO TAMANHO TOTAL DO ELEMENTO */
+}
+
+.meteoros {
+    flex-direction: row-reverse; /* INVERTE A DIREÇÃO DOS ITENS NO CONTAINER FLEX */
+}
+
+.meteoros img {
+    margin-left: 30px; /* ESPAÇO ENTRE A IMAGEM E O TEXTO */
+    margin-right: 0; /* REMOVE O ESPAÇO À DIREITA DA IMAGEM */
+}
+
+.texto h5 {
+    font-size: 2.5rem; /* AUMENTA O TAMANHO DA FONTE DO H5 */
+    padding: 30px 0; /* ESPAÇO INTERNO AO REDOR DO H5 */
+    margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H5 */
+}
+
+.texto h6 {
+    font-size: 2rem; /* AUMENTA O TAMANHO DA FONTE DO H6 */
+    padding: 20px 0; /* ESPAÇO INTERNO AO REDOR DO H6 */
+    margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H6 */
+}
+
+.texto h7 {
+    font-size: 2.5rem; /* AJUSTA O TAMANHO DA FONTE DO H7 PARA SER IGUAL AO H5 */
+    padding: 30px 0; /* ESPAÇO INTERNO AO REDOR DO H7 */
+    margin-bottom: 20px; /* ESPAÇO ABAIXO DO H7 */
+}
+
+.texto h8 {
+    font-size: 2rem; /* AJUSTA O TAMANHO DA FONTE DO H8 PARA SER IGUAL AO H6 */
+    padding: 20px 0; /* ESPAÇO INTERNO AO REDOR DO H8 */
+    margin-bottom: 20px; /* ESPAÇO ABAIXO DO H8 */
+}
+
+.texto p {
+    font-size: 1.4rem; /* MANTÉM O TAMANHO DA FONTE DO PARÁGRAFO */
+    margin-top: 6%; /* REMOVE O ESPAÇO ACIMA DO PARÁGRAFO, SE NECESSÁRIO */
+    margin-bottom: 20px; /* ESPAÇO ABAIXO DO PARÁGRAFO */
+}
+
+.eclipse::before, .meteoros::before, .auroras::before, .eventos::before {
+    content: ""; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento em relação ao contêiner pai */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 80%; /* Define a largura do quadrado */
+    height: 80%; /* Define a altura do quadrado */
+    background-color: var(--cinza-square); /* Cor cinza definida no :root */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento para centralizar o quadrado */
+    z-index: -1; /* Garante que o quadrado fique atrás do conteúdo */
 }
