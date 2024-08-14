@@ -159,7 +159,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto 40px; /* Adiciona 40px de margem inferior */
+    margin: 20px auto 90px; /* Adiciona 40px de margem inferior */
     gap: 40px; /* Espaço entre o texto e o botão */
     font-family: 'Montserrat', sans-serif; /* Alinhamento de fonte com o restante do site */
     font-size: 1.8rem; /* Ajuste conforme necessário */
