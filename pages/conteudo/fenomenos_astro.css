@@ -22,9 +22,9 @@
 }
 
 body {
-    height: auto;
-    min-height: 20vh;
-    margin: 0;
+    max-width: 1440px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
+    padding-top: 70px;
     background: url('../../images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -46,14 +46,12 @@ body {
 }
 
 .logo {
-    height: 50px; /* Ajuste conforme necessário */
-    margin-right: 20px;
+    height: 120px; /* Ajuste a altura para coincidir com a barra */
 }
 
 .menu {
     display: flex;
     gap: 150px; /* Espaço entre os itens */
-    margin: 0 auto; /* Centraliza o menu horizontalmente */
     flex: 1;
     justify-content: center; /* Centraliza os itens dentro do menu */
 }
@@ -69,7 +67,6 @@ body {
 .menu a:hover {
     text-decoration: underline;
 }
-
 
 
 .bloco {

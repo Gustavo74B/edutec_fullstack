@@ -13,14 +13,14 @@
 }
 
 body {
-    height: 100vh; /* Define a altura do body como a altura da viewport */
-    margin: 0;
+    max-width: 1440px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
+    padding-top: 70px;
     background: url('../images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
+    justify-content: flex-start;
 }
 
 .barra {
@@ -37,8 +37,7 @@ body {
 }
 
 .logo {
-    height: 50px; /* Ajuste conforme necessário */
-    margin-right: 20px;
+    height: 120px; /* Ajuste a altura para coincidir com a barra */
 }
 
 .menu {
@@ -63,12 +62,13 @@ body {
 .conteudos {
     position: relative;
     width: 100%;
-    height: 100%; /* Ajuste a altura conforme necessário */
+    min-height: calc(100vh - 70px); /* Garante que o conteúdo ocupe a altura total da viewport menos a altura da barra */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centraliza verticalmente o conteúdo */
     align-items: center; /* Centraliza horizontalmente o conteúdo */
     padding: 40px; /* Espaço interno ao redor do conteúdo */
+    text-align: center; /* Garante que o texto também esteja centralizado */
 }
 
 .conteudos h1 {

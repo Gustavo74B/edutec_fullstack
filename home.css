@@ -13,60 +13,68 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comodo', sans-serif;
 }
 
 :root {
     --sonichedgehog: #0000CD;
     --hollowpurple: #a729f5;
     --white: #fff;
+<<<<<<< HEAD
     --cinza-square: rgba(86, 86, 86, 0.83);
     --voce_sabia: #7B3D85;
     --conhece_sistema: #232D8D;
 }   
 /* Estilos gerais */
+=======
+    --cinza-square: rgba(0, 0, 0, 0.678);
+}
+
+>>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
 body {
-    height: auto;
-    min-height: 100vh;
-    margin: 0;
+    max-width: 1440px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
     padding-top: 70px;
-    background: url('./images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
+    background: url('../images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-header {
+.barra {
     width: 100%;
     height: 70px;
     background: linear-gradient(to right, var(--sonichedgehog), var(--hollowpurple));
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0 20px;
+    z-index: 10;
 }
 
 .logo {
+<<<<<<< HEAD
     height: 125px;
+=======
+    height: 120px; /* Ajuste a altura para coincidir com a barra */
+>>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
 }
 
 .menu {
     display: flex;
-    gap: 30px;
-    margin: 0 auto;
+    gap: 150px; /* Espaço entre os itens */
     flex: 1;
-    justify-content: center;
+    justify-content: center; /* Centraliza os itens dentro do menu */
 }
 
 .menu a {
+    font-family: 'Geologica', sans-serif;
     font-weight: 500;
     color: var(--white);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Ajuste conforme necessário */
 }
 
 .menu a:hover {
@@ -103,6 +111,7 @@ h2 {
 
 .quadrado {
     width: 100%;
+<<<<<<< HEAD
     max-width: 1200px;
     height: 495px;
     background-color: var(--voce_sabia);
@@ -117,6 +126,11 @@ h2 {
     max-width: 1200px;
     height: 495px;
     background-color: var(--conhece_sistema);
+=======
+    max-width: 1400px;
+    height: 600px;
+    background-color: var(--cinza-square);
+>>>>>>> 2ce90f1 (os botoes estão com os devidas funçoes adicionados,organização da home,sistema solar iniciado,quiz iniciado)
     display: flex;
     align-items: center;
     padding: 0;
@@ -124,12 +138,14 @@ h2 {
 }
 
 .imagem {
-    width: 50%;
-    height: 100%;
-    background-image: url('./images/trabalhodolaisu.png');
-    background-size: cover;
-    background-position: center;
+    width: 10%; /* Mantém a largura em 50% do contêiner pai */
+    height: 10%; /* Mantém a altura em 100% do contêiner pai */
+    background-image: url('./images/terra.png');
+    background-size: contain; /* A imagem será redimensionada para caber no contêiner */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem dentro do contêiner */
 }
+
 
 .texto {
     width: 50%;
@@ -139,6 +155,7 @@ h2 {
     padding: 20px;
     color: var(--white);
     box-sizing: border-box;
+    font-size: 1.5rem;
 }
 
 .bloco-miniaturas {
@@ -148,12 +165,12 @@ h2 {
     align-items: center;
     height: auto;
     padding: 20px;
-    flex-direction: column; /* Ajuste para garantir que o texto esteja abaixo das miniaturas */
+    flex-direction: column;
 }
 
 .quadrado-miniaturas {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     min-height: 495px;
     background-color: var(--cinza-square);
     display: flex;
@@ -168,7 +185,7 @@ h2 {
     font-weight: 900;
     color: var(--white);
     font-size: 3rem;
-    margin-bottom: 20px; /* Reduza a margem inferior para espaço adequado para o texto adicional */
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -177,7 +194,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     width: 100%;
     max-height: calc(100% - 60px);
     overflow-y: auto;
@@ -199,41 +216,25 @@ h2 {
 
 .miniatura p {
     font-family: 'Geologica', sans-serif;
-    font-weight: 500;
+    font-weight:500;
     color: var(--white);
     margin-top: 40px;
 }
 
-/* Novo estilo para o texto adicional */
 .descricao {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 80px; /* Espaço entre as miniaturas e o texto adicional */
-    max-width: 800px; /* Limite a largura do texto para não ser muito largo */
+    margin-top: 80px;
+    max-width: 800px;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
+    height: 70px; /* Mantém o alinhamento vertical com o header */
 }
 
-@media (max-width: 1440px) {
-    .bloco {
-        margin-top: 350px; /* Espaço aumentado acima do bloco cinza para telas menores */
-    }
 
-    .centro {
-        margin-top: 250px; /* Ajuste o espaço acima do bloco central para telas menores */
-    }
-
-    .bloco-miniaturas {
-        margin-top: 250px; /* Aumenta o espaço acima do bloco-miniaturas para telas menores */
-    }
-
-
-
-
-}
