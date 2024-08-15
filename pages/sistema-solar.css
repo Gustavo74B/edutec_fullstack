@@ -70,3 +70,27 @@ body {
 .menu a:hover {
     text-decoration: underline;
 }
+
+/* Estilização da seção dos planetas */
+.planetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Espaçamento entre os planetas */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    padding: 20px;
+    text-align: center;
+}
+
+.planeta img {
+    width: 100px; /* Aumenta o tamanho dos planetas */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5%; /* Faz as imagens ficarem circulares */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Adiciona sombra para destacar as imagens */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.planeta img:hover {
+    transform: scale(1.15); /* Ampliação leve ao passar o mouse */
+}
