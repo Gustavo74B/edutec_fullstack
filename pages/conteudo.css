@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Comodo";
-    src: url("./fonts/comodo-comodo-regular-400.ttf") format("truetype");
+    src: url("../fonts/comodo-comodo-regular-400.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Light.ttf") format("truetype");
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
 }
 
 /* Reseta margens e preenchimentos padrões */
@@ -31,7 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-family: Comodo;
 }
 
 .barra {
@@ -66,6 +65,7 @@ body {
     color: var(--white);
     text-decoration: none;
     font-size: 1.2rem; /* Ajuste conforme necessário */
+    font-family: Comodo;
 }
 
 .menu a:hover {
@@ -85,7 +85,7 @@ body {
 }
 
 .conteudos h1 {
-    font-family: 'Geologica', sans-serif;
+    font-family: Comodo;
     font-weight: 900;
     color: var(--white);
     font-size: 3rem; /* Ajuste conforme necessário */
@@ -114,8 +114,8 @@ body {
 }
 
 .imagem-item p {
-    font-family: 'Geologica', sans-serif;
-    font-weight: 500;
+    font-family: Montserrat;
+    font-weight: 600;
     color: var(--white);
     margin-top: 10px; /* Espaço acima do texto */
 }

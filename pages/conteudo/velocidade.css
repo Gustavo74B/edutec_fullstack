@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Comodo";
-    src: url("./fonts/Comodo Regular Free.ttf") format("truetype");
+    src: url("../../fonts/comodo-comodo-regular-400.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
+    src: url("../../fonts/Montserrat-Light.ttf") format("truetype");
 }
 
 * {
@@ -56,10 +56,11 @@ body {
     gap: 150px; /* ESPAÇO ENTRE OS ITENS DO MENU */
     flex: 1;
     justify-content: center; /* CENTRALIZA OS ITENS DENTRO DO MENU */
+    margin-right: 200px;
 }
 
 .menu a {
-    font-family: 'Geologica', sans-serif;
+    font-family: Comodo;
     font-weight: 500;
     color: var(--white);
     text-decoration: none;
@@ -76,6 +77,7 @@ body {
     color: var(--white);
     padding-top: 70px; /* ESPAÇO SUFICIENTE PARA A BARRA DE NAVEGAÇÃO */
     margin-bottom: 20px; /* ESPAÇO ABAIXO DO TÍTULO */
+    font-family: Comodo;
 }
 
 
@@ -109,7 +111,7 @@ body {
 
 .velocidade-luz .texto, .dia-dia .texto {
     width: 50%; /* AJUSTA A LARGURA DO TEXTO CONFORME NECESSÁRIO */
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat;
     font-weight: 500;
     text-align: left; /* ALINHA O TEXTO À ESQUERDA */
     padding: 20px; /* ESPAÇO INTERNO NO TEXTO */
@@ -137,12 +139,14 @@ body {
     font-size: 2.5rem; /* AUMENTA O TAMANHO DA FONTE DO H5 */
     padding: 30px 0; /* ESPAÇO INTERNO AO REDOR DO H5 */
     margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H5 */
+    font-family: Comodo;
 }
 
 .texto h6 {
     font-size: 2rem; /* AUMENTA O TAMANHO DA FONTE DO H6 */
     padding: 20px 0; /* ESPAÇO INTERNO AO REDOR DO H6 */
     margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H6 */
+    font-family: Comodo;
 }
 
 .texto h7 {
@@ -177,7 +181,7 @@ body {
     align-items: center;
     margin: 20px auto 90px; /* Adiciona 40px de margem inferior */
     gap: 40px; /* Espaço entre o texto e o botão */
-    font-family: 'Montserrat', sans-serif; /* Alinhamento de fonte com o restante do site */
+    font-family: Montserrat; /* Alinhamento de fonte com o restante do site */
     font-size: 1.8rem; /* Ajuste conforme necessário */
     color: var(--white); /* Cor do texto */
 }
