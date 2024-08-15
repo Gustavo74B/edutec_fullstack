@@ -44,7 +44,7 @@ body {
     left: 0;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0;
     z-index: 10;
 }
 
@@ -53,14 +53,15 @@ body {
 }
 
 .menu {
+    font-family: "Comodo";
     display: flex;
     gap: 150px; /* Espaço entre os itens */
     flex: 1;
     justify-content: center; /* Centraliza os itens dentro do menu */
+    margin-right: 200px;
 }
 
 .menu a {
-    font-family: 'Geologica', sans-serif;
     font-weight: 500;
     color: var(--white);
     text-decoration: none;
