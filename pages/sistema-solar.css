@@ -79,7 +79,7 @@ body {
     align-items: center;
     gap: 60px; /* Espaçamento entre os planetas */
     height: 100vh; /* Ocupa toda a altura da tela */
-    padding: 5px;
+    padding: 2px;
     text-align: center;
 }
 
@@ -96,6 +96,6 @@ body {
     transform: scale(1.15); /* Ampliação leve ao passar o mouse */
 }
 
-.planeta{
-    padding: 8px;
+.planetas{
+    padding: 1px;
 }
