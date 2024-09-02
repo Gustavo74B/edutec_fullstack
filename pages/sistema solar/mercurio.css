@@ -103,6 +103,7 @@ body {
     font-family: "Montserrat";
     font-size: 2.5rem;
     color: var(--white);
+    margin-bottom: 10px;
 }
 
 .text-side p {
