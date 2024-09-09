@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Comodo";
-    src: url("./fonts/comodo-comodo-regular-400.ttf") format("truetype");
+    src: url("../../fonts/comodo-comodo-regular-400.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Light.ttf") format("truetype");
+    src: url("../../fonts/Montserrat-Light.ttf") format("truetype");
 }
 
 /* Reseta margens e preenchimentos padrões */
@@ -75,7 +75,6 @@ body {
     justify-content: space-between; /* Garante que o texto e a imagem fiquem bem separados */
     padding: 20px;
     gap: 40px; /* Espaço entre a imagem e o texto */
-    margin-block: auto;
 }
 
 .image-large {

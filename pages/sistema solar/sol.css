@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Comodo";
-    src: url("./fonts/comodo-comodo-regular-400.ttf") format("truetype");
+    src: url("../../fonts/comodo-comodo-regular-400.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Light.ttf") format("truetype");
+    src: url("../../fonts/Montserrat-Light.ttf") format("truetype");
 }
 
 /* Reseta margens e preenchimentos padrões */
