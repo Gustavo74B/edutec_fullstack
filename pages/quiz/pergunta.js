@@ -27,7 +27,7 @@ function redirecionar() {
 async function buscarPerguntas() {
     const urlDados = "./pergunta.json"
 
-    await fetch(urlDados).then(resposta => resposta.json()).then(dados => {})
+    await fetch(urlDados).then(resposta => resposta.json()).then(dados => quiz = dados)
 }
 
 function montarPergunta() {
@@ -38,7 +38,7 @@ function montarPergunta() {
             <span>Pergunta ${contador}/10</span>
         </div>
         <div class="question">
-            <p>${urlDados.perguntas[contador-1].pergunta}</p>
+            <p>${quiz.perguntas[contador-1].pergunta}</p>
             <div class="options">
                 <button class="option" onclick="selectOption(this)">300 km/s</button>
                 <button class="option" onclick="selectOption(this)">300.000 km/s</button>
