@@ -43,7 +43,7 @@ body {
     left: 0;
     display: flex;
     align-items: center;
-    padding: 0 20px; /* ESPAÇO INTERNO NA BARRA DE NAVEGAÇÃO */
+    padding: 0; /* ESPAÇO INTERNO NA BARRA DE NAVEGAÇÃO */
     z-index: 10;
 }
 
@@ -136,14 +136,14 @@ body {
 }
 
 .texto h5 {
-    font-size: 2.5rem; /* AUMENTA O TAMANHO DA FONTE DO H5 */
+    font-size: 34px; /* AUMENTA O TAMANHO DA FONTE DO H5 */
     padding: 30px 0; /* ESPAÇO INTERNO AO REDOR DO H5 */
     margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H5 */
     font-family: Comodo;
 }
 
 .texto h6 {
-    font-size: 2rem; /* AUMENTA O TAMANHO DA FONTE DO H6 */
+    font-size: 34px;; /* AUMENTA O TAMANHO DA FONTE DO H6 */
     padding: 20px 0; /* ESPAÇO INTERNO AO REDOR DO H6 */
     margin-bottom: 20px; /* AUMENTA O ESPAÇO ABAIXO DO H6 */
     font-family: Comodo;
