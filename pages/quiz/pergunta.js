@@ -4,6 +4,7 @@ let contador = 1
 let resposta = ""
 let idInputResposta = ""
 let respostaCorretaId = ""
+let pergunta = 0
 
 function selectOption(selectedButton) {
     const options = document.querySelectorAll('.option');
@@ -40,10 +41,10 @@ function montarPergunta() {
         <div class="question">
             <p>${quiz.perguntas[contador-1].pergunta}</p>
             <div class="options">
-                <button class="option" onclick="selectOption(this)">300 km/s</button>
-                <button class="option" onclick="selectOption(this)">300.000 km/s</button>
-                <button class="option" onclick="selectOption(this)">300.000 km/h</button>
-                <button class="option" onclick="selectOption(this)">3.000 km/s</button>
+                <button class="option" onclick="selectOption(this)">${quiz.perguntas[contador-1].opcoes[0]}</button>
+                <button class="option" onclick="selectOption(this)">${quiz.perguntas[contador-1].opcoes[1]}</button>
+                <button class="option" onclick="selectOption(this)">${quiz.perguntas[contador-1].opcoes[2]}</button>
+                <button class="option" onclick="selectOption(this)">${quiz.perguntas[contador-1].opcoes[3]}</button>
             </div>
         </div>
         <button class="verify-button">Verificar</button>
@@ -96,7 +97,7 @@ function adicionarEventoInputs() {
     inputsResposta.forEach(input => {
         input.addEventListener("click", guardarResposta)
     
-        if (input.value === urlDados.perguntas[pergunta-1].respostaCorresta){
+        if (input.value === quiz.perguntas[pergunta-1].respostaCorresta){
             respostaCorretaId = input.id
         }
     })
