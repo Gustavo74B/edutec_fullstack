@@ -50,13 +50,12 @@ body {
     height: 120px; /* Ajuste a altura para coincidir com a barra */
 }
 
-.menu {
-    font-family: "Comodo";
-    display: flex;
-    gap: 150px; /* Espaço entre os itens */
-    flex: 1;
-    justify-content: center; /* Centraliza os itens dentro do menu */
-    margin-right: 200px;
+.menu a {
+    font-family: Comodo;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem; /* Ajuste conforme necessário */
 }
 
 .menu a {
