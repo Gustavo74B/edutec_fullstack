@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="barra">
-        <!-- Adicione o link para o qual a logo deve redirecionar -->
-        <a href="../../index.html" class="logo-link"> <!-- Substitua "https://example.com" pelo URL desejado -->
+        <a href="../../index.html" class="logo-link">
             <img src="../../images/logo_sideralis.png" alt="Logo" class="logo">
         </a>
         <div class="menu">
@@ -20,10 +19,29 @@
         </div>
     </div>
 
-    <div class="resultado-container">
-        <h1>Resultado do Quiz</h1>
-        <p id="resultado"></p>
-        <button onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    <div class="bloco">
+        <div class="conteudo">
+            <h2>Seu Resultado</h2>
+            <p>Você acertou <span id="pontos"></span> de 10 questões.</p>
+            <div class="ranking">
+                <h3>Ranking dos Participantes</h3>
+                <div class="ranking-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Posição</th>
+                                <th>Nome</th>
+                                <th>Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-body">
+                            <!-- Os resultados do ranking serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button onclick="voltarParaQuiz()">Voltar para o Quiz</button>
+        </div>
     </div>
 </body>
 </html>

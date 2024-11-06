@@ -1,11 +1,10 @@
 let quiz = {};
 let pontos = 0;
 let contador = 1;
-let respostaCorretaId = "";
 let perguntaIndex = 0;
 
 async function buscarPerguntas() {
-    const urlDados = "./pergunta.json";
+    const urlDados = "pergunta.json";
 
     await fetch(urlDados)
         .then(resposta => resposta.json())
@@ -52,13 +51,29 @@ function validarResposta() {
     }
 
     const respostaSelecionada = selectedButton.textContent;
-    if (respostaSelecionada === quiz.perguntas[perguntaIndex].respostaCorresta) {
+    const respostaCorreta = quiz.perguntas[perguntaIndex].respostaCorresta;
+
+    // Verificar se a resposta está correta
+    if (respostaSelecionada === respostaCorreta) {
         pontos++;
+        selectedButton.classList.add('correct'); // Adiciona a classe correto
+    } else {
+        selectedButton.classList.add('incorrect'); // Adiciona a classe incorreta
+        // Marcar a resposta correta
+        const options = document.querySelectorAll('.option');
+        options.forEach(option => {
+            if (option.textContent === respostaCorreta) {
+                option.classList.add('correct'); // Adiciona a classe correto à resposta correta
+            }
+        });
     }
 
-    perguntaIndex++;
-    contador++;
-    montarPergunta();
+    // Esperar um segundo para mostrar as respostas antes de passar para a próxima pergunta
+    setTimeout(() => {
+        perguntaIndex++;
+        contador++;
+        montarPergunta();
+    }, 1000); // 1000 milissegundos = 1 segundo
 }
 
 function finalizar() {
@@ -80,6 +95,11 @@ function redirecionar() {
 
 async function iniciar() {
     await buscarPerguntas();
+}
+
+function finalizar() {
+    localStorage.setItem("pontos", pontos); // Armazena a pontuação no localStorage
+    window.location.href = "./resultado.html"; // Redireciona para a página de resultados
 }
 
 iniciar();
