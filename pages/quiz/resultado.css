@@ -110,6 +110,32 @@ body, html {
 }
 
 
-button{
-    color:;
+.voltar {
+    display: flex; /* Usando flexbox */
+    position: absolute; /* Faz o elemento ser posicionado em relação ao seu primeiro ancestral posicionado */
+    top: 0;            /* Alinha ao topo */
+    left: 0;           /* Alinha à esquerda */
+    padding: 20px;     /* Adiciona espaço interno */
+
 }
+
+.voltar p {
+    margin-left: 121px; /* Espaçamento entre o link e o texto */
+    margin-top: 35px;   /* Ajuste este valor conforme necessário */
+    font-family: comodo;
+    font-size: 25px;
+}
+
+.conteudo {
+    display: block;
+    margin-top: -200px;
+    left: 200px; /* Posicionado à esquerda */
+    font-family: comodo;
+}
+
+.ranking {
+    margin-top: -300px;
+    float: right; /* Flutuando à direita */
+    margin-right: 50px; /* Espaçamento à direita */
+}
+
