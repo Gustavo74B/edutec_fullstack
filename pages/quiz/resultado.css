@@ -66,6 +66,30 @@ body {
     z-index: 10;
 }
 
+
+.resultado {
+    content: ""; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento em relação ao contêiner pai */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 80%; /* Define a largura do quadrado */
+    height: 80%; /* Define a altura do quadrado */
+    background-color: var(--cinza-square); /* Cor cinza definida no :root */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento para centralizar o quadrado */
+    z-index: -1; /* Garante que o quadrado fique atrás do conteúdo */
+    border-radius: 20px;
+}
+
+.bloco{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 300px;
+    margin-right: 900px;
+    
+}
+
+
 .logo {
     height: 120px; /* Ajuste a altura para coincidir com a barra */
 }
@@ -102,4 +126,9 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+button{
+    color:;
 }

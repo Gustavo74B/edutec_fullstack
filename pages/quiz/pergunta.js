@@ -2,6 +2,7 @@ let quiz = {};
 let pontos = 0;
 let contador = 1;
 let perguntaIndex = 0;
+let verifyQuestion = true;
 
 async function buscarPerguntas() {
     const urlDados = "pergunta.json";
@@ -30,7 +31,7 @@ function montarPergunta() {
                     `).join('')}
                 </div>
             </div>
-            <button class="verify-button" onclick="validarResposta()">Verificar</button>
+            <button class="verify-button" onclick="handlerNext()">Verificar</button>
         `;
     } else {
         finalizar();
@@ -43,8 +44,20 @@ function selectOption(selectedButton) {
     selectedButton.classList.add('selected');
 }
 
+function handlerNext(){
+    // Se o botão for "Próximo", avança a pergunta
+    if(!verifyQuestion){
+        proximaPergunta();
+        return;
+    }
+    validarResposta();
+}
+
 function validarResposta() {
+
     const selectedButton = document.querySelector('.option.selected');
+    const verifyButton = document.querySelector('.verify-button');
+
     if (!selectedButton) {
         alert('Por favor, selecione uma opção.');
         return;
@@ -68,12 +81,17 @@ function validarResposta() {
         });
     }
 
-    // Esperar um segundo para mostrar as respostas antes de passar para a próxima pergunta
-    setTimeout(() => {
-        perguntaIndex++;
-        contador++;
-        montarPergunta();
-    }, 1000); // 1000 milissegundos = 1 segundo
+    verifyQuestion = false;
+    verifyButton.textContent = 'Próxima';
+}
+
+function proximaPergunta(){
+    const verifyButton = document.querySelector('.verify-button');
+    perguntaIndex++;
+    contador++;
+    verifyQuestion = true;
+    verifyButton.textContent = 'Verificar';
+    montarPergunta();
 }
 
 function finalizar() {
