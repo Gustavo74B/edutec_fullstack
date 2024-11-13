@@ -1,0 +1,24 @@
+{
+  "name": "trabalho_edutec_fisica",
+  "version": "1.0.0",
+  "description": "trabalho",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"Hello World\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielSantosSales/trabalho_edutec_fisica.git"
+  },
+  "author": "os brabo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielSantosSales/trabalho_edutec_fisica/issues"
+  },
+  "homepage": "https://github.com/GabrielSantosSales/trabalho_edutec_fisica#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7"
+  }
+}
