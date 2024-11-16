@@ -34,16 +34,6 @@ body {
     justify-content: flex-start;
 }
 
-.bloco {
-    background-color: #4a4a4a;
-    padding: 20px;
-    border-radius: 18px;
-    width: 900px;
-    text-align: center;
-    margin-block: auto;
-    height: 430px;
-    
-}
 
 .sair {
     background: none;
@@ -66,28 +56,6 @@ body {
     z-index: 10;
 }
 
-
-.resultado {
-    content: ""; /* Necessário para criar o pseudo-elemento */
-    position: absolute; /* Posiciona o pseudo-elemento em relação ao contêiner pai */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    width: 80%; /* Define a largura do quadrado */
-    height: 80%; /* Define a altura do quadrado */
-    background-color: var(--cinza-square); /* Cor cinza definida no :root */
-    transform: translate(-50%, -50%); /* Ajusta o posicionamento para centralizar o quadrado */
-    z-index: -1; /* Garante que o quadrado fique atrás do conteúdo */
-    border-radius: 20px;
-}
-
-.bloco{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 300px;
-    margin-right: 900px;
-    
-}
 
 
 .logo {
@@ -145,16 +113,76 @@ body, html {
     font-size: 25px;
 }
 
-.conteudo {
-    display: block;
-    margin-top: -200px;
-    left: 200px; /* Posicionado à esquerda */
-    font-family: comodo;
+/* resultado.css */
+/* Estilizando o bloco de fundo */
+.bloco-fundo {
+    background-color: #5e5e5e; /* Cor de fundo do bloco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    margin: 250px; /* Margem superior e inferior */
+    width: 100%; /* Largura total da tela */
+    max-width: 1880px; /* Largura máxima de 1880 pixels */
+    height: 600px; /* Definindo uma altura fixa */
 }
 
-.ranking {
-    margin-top: -300px;
-    float: right; /* Flutuando à direita */
-    margin-right: 50px; /* Espaçamento à direita */
+/* Estilizando a seção resultado */
+
+/* Estilizando o bloco de resultados */
+.bloco {
+    display: flex; /* Usar flexbox para alinhar conteúdo */
+    justify-content: space-between; /* Espaço entre os itens */
+    width: 100%; /* Ajuste a largura conforme necessário */
+}
+
+/* Estilizando o conteúdo */
+.conteudo {
+    padding-right: 20px; /* Espaço à direita para as linhas horizontais */
+    text-align: right; /* Alinha o texto à direita */
+    margin-top: 50px; /* Adiciona margem superior para mover para baixo */
+}
+
+/* Estilizando os títulos e parágrafos */
+.conteudo h2,
+.conteudo h3,
+.conteudo p {
+    margin: 5px 0; /* Adiciona margem superior e inferior para espaçamento */
+    margin-right: 11px; /* Adiciona espaço à direita */
+}
+
+/* Estilizando as linhas horizontais */
+.linhas-horizontais {
+    display: flex; /* Usar flexbox para alinhar as linhas */
+    flex-direction: column; /* Colocar as linhas em coluna */
+    margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+}
+
+.linha-horizontal {
+    border-bottom: 1px solid #ccc; /* Linha horizontal */
+    padding: 15px 0; /* Espaçamento vertical */
+    margin-right: 95px; /* Ajuste a margem esquerda conforme necessário */
+}
+/* Estilizando a seção de voltar */
+/* Estilizando a seção resultado */
+.resultado {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+/* Estilizando a seção de voltar */
+.voltar {
+    margin-top: 290px; /* Margem superior para separar do conteúdo */
+    margin-left: 100px; /* Adiciona espaço à direita */
+    text-align: left; /* Alinha o texto à direita */
+    width: 15%; /* Faz a div ocupar toda a largura do contêiner pai */
+}
+
+/* Estilizando o link de voltar */
+.voltar a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #007BFF; /* Cor do texto do link */
+    font-weight: bold; /* Negrito */
+    
 }
 

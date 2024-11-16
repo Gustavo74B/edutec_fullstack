@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./cadastro.css">
-    <script src="cadastro.js" defer></script>
-    <title>Cadastro</title>
+    <title>cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
     <div class="barra">
@@ -19,39 +18,27 @@
         </div>
     </div>
 
-
-    <section class="cadastro">
-    <div class="bloco">
-        <div class="conteudo">
-            <h2>Preencha os campos abaixo para <br><strong>criar sua conta</strong></h2>
-            <p>Você acertou <span id="pontos"></span> de 10 questões.</p>
-            
-            
-        </div>
-        <div class="ranking">
-            <h3>Ranking dos Participantes</h3>
-            <div class="ranking-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Posição</th>
-                            <th>Nome</th>
-                            <th>Pontos</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ranking-body">
-                        <!-- Os resultados do ranking serão inseridos aqui -->
-                    </tbody>
-                </table>
+    <div class="login-container">
+        <h2>Cadastro</h2>
+        <p>Preencha os campos abaixo para criar sua conta. </p>
+        <form id="loginForm" action="login" method="post">
+            <div class="input-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
             </div>
-        </div>
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Já tem uma conta? Clique <a href="login.html">aqui</a>e faça login.</p>
     </div>
-    <div class="voltar">
-    <a class="voltar" href="../../pages/quiz.html" >
-        <img src="../../images/x.png" alt="Botão de voltar para o quiz" style="vertical-align: middle;">
-    </a>
-    <p>Voltar</p>
-</div>
-</section>
+
+    <script src="cadastro.js"></script>
 </body>
 </html>
