@@ -1,3 +1,7 @@
+//Importação do cors e jsonwebtoken
+const jwt = require("jsonwebtoken")
+const cors = require("cors")
+
 // Importação e uso do MySQL12 
 const mysql = require('mysql2');
 
@@ -27,12 +31,18 @@ const mysql = require('mysql2');
     // Define uma porta para o servidor
     const PORT = process.env.PORT || 3000;
 
-    // Define uma rota de teste
-    app.get('/', (req, res) => {
-    res.send('Olá, Mundo');
-    });
-
     // Inicia o servidor
     app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
     });
+
+
+//script do vídeo do marcio
+app.use(cors())
+
+app.post("/register", (request,response) => {
+        const user = request.body.user
+    
+        console.log(user)
+    })
+app.use(express.json())
