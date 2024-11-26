@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Comodo";
-    src: url("./fonts/comodo-comodo-regular-400.ttf") format("truetype");
+    src: url("./frontend/fonts/comodo-comodo-regular-400.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Light.ttf") format("truetype");
+    src: url("./frontend/fonts/Montserrat-Light.ttf") format("truetype");
 }
 
 /* Reseta margens e preenchimentos padrões */
@@ -26,7 +26,7 @@ body {
     max-width: 1440px; /* Define a largura máxima do conteúdo */
     margin: 0 auto; /* Centraliza o conteúdo e adiciona espaço nas laterais */
     padding-top: 70px;
-    background: url('../images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
+    background: url('./frontend/images/kyle-gregory-devaras-QFjSiok61xA-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ h2 {
 .imagem {
     width: 10%; /* Mantém a largura em 50% do contêiner pai */
     height: 10%; /* Mantém a altura em 100% do contêiner pai */
-    background-image: url('./images/terra.png');
+    background-image: url('./frontend/images/terra.png');
     background-size: contain; /* A imagem será redimensionada para caber no contêiner */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-position: center; /* Centraliza a imagem dentro do contêiner */
