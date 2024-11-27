@@ -1,3 +1,9 @@
+import { verifyToken } from "../../../utils/verify-token.js";
+
+const url = "../login-cadastro/login.html"
+
+verifyToken(url);
+
 let quiz = {};
 let pontos = 0;
 let contador = 1;
@@ -92,11 +98,6 @@ function proximaPergunta(){
     verifyQuestion = true;
     verifyButton.textContent = 'Verificar';
     montarPergunta();
-}
-
-function finalizar() {
-    localStorage.setItem("pontos", pontos);
-    window.location.href = "./resultado.html";
 }
 
 function mostrarPopup() {

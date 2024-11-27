@@ -1,14 +1,5 @@
-function verifyToken() {
-    // pega o token no localstorage
-    const token = localStorage.getItem("token")
+import { verifyToken } from "./utils/verify-token.js";
 
-    // se n tiver token, manda pra página de login
-    if(!token) {
-        window.location.href= "./frontend/pages/login-cadastro/login.html"
-        return
-    }
+const url = "./frontend/pages/login-cadastro/login.html"
 
-
-}
-
-verifyToken()
+verifyToken(url)

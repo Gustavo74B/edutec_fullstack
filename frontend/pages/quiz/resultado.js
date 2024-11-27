@@ -1,3 +1,9 @@
+import { verifyToken } from "../../../utils/verify-token.js";
+
+const url = "../login-cadastro/login.html"
+
+verifyToken(url);
+
 document.addEventListener("DOMContentLoaded", function() {
     // Obtém a pontuação armazenada no localStorage
     const pontos = localStorage.getItem("pontos") || 0;

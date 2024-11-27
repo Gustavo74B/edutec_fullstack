@@ -71,12 +71,26 @@ app.post("/login", (request, response) => {
 
         if(user.senha === data[0].senha) {
             const email = user.email
-            const token = jwt.sign({ email }, SECRET_KEY, {expiresIn: "1h"})
+            const id = user.id
+            const token = jwt.sign({ id, email }, SECRET_KEY, {expiresIn: "1h"})
             response.json({token, ok: true})
             return
         }
 
         response.json({message: "Credenciais inválidas, tente novaente"})
+    })
+})
+
+app.get("/verify", (request, response) => {
+    const token = request.headers.authorization
+
+    jwt.verify(token, SECRET_KEY, (error) => {
+        if(error) {
+            response.json({message: "Token inválido, faça o login novamente"})
+            return
+        }
+
+        response.json({ok: true})
     })
 })
 
