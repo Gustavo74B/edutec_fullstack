@@ -119,8 +119,18 @@ function redirecionar() {
     window.location.href = "../../quiz.html";
 }
 
+function adicionarEventosPopup() {
+    const btnFicar = document.getElementById('botao_ficar');
+    const btnSair = document.getElementById('botao_sair');
+
+    // Adiciona eventos aos botões do popup
+    btnFicar.addEventListener('click', tirarPopup);
+    btnSair.addEventListener('click', redirecionar);
+}
+
 async function iniciar() {
     await buscarPerguntas();
+    adicionarEventosPopup()
 }
 
 function finalizar() {
