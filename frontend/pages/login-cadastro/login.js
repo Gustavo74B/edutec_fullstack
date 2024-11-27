@@ -2,6 +2,12 @@ async function login() {
     const email = document.querySelector("#email").value
     const senha = document.querySelector("#password").value
 
+        // Verifica se os campos não estão vazios
+    if (!email || !senha) {
+        alert("Por favor, preencha todos os campos.");
+        return;  // Não continua se algum campo estiver vazio
+    }
+
     const user = {
         email,
         senha
