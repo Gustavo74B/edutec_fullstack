@@ -1,48 +1,62 @@
-//Importação do cors e jsonwebtoken
+//Importações
 const jwt = require("jsonwebtoken")
 const cors = require("cors")
-
-// Importação e uso do MySQL12 
+const express = require('express');
 const mysql = require('mysql2');
 
-    // Configuração da Conexão com mysql
-    const db = mysql.createConnection({
-        host: 'localhost',       // Ou o endereço do seu servidor MySQL
-        user: 'usuario',      // Usuário do MySQL
-        password: 'senha',    // Senha do MySQL
-        database: 'db_edutec',     // Nome do banco de dados
-        port: 3307
-    });
-    
-    // Conecta ao banco de dados (se der erro, ele avisa)
-    db.connect((err) => {
-        if (err) {
-        console.error('Erro ao conectar ao banco de dados:', err);
-        return;
-        }
-        console.log('Conectado ao banco de dados MySQL');
-    });
-
-
-// Importação e uso do Express
-    const express = require('express');
-    const app = express();
-
-    // Define uma porta para o servidor
-    const PORT = process.env.PORT || 3000;
-
-    // Inicia o servidor
-    app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-    });
-
-
 //script do vídeo do marcio
-app.use(cors())
+const app = express();
 
-app.post("/register", (request,response) => {
-        const user = request.body.user
-    
-        console.log(user)
-    })
+const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = process.env
+
+app.use(cors())
 app.use(express.json())
+
+app.post("/register", (request, response) => {
+    const user = request.body.user
+
+    const searchCommand = `
+        SELECT * FROM Users
+        WHERE email = ?
+    `
+
+    db.query(searchCommand, [user.email], (error, data) => {
+        if(error) {
+            console.log(error)
+            return
+        }
+
+        if(data.lenght !== 0) {
+            response.json({ message: "Email cadastrado em outra conta", userExists: true})
+            return
+        }
+
+        const insertCommand = `
+            INSERT INTO Users(email, usuario, senha)
+            VALUES (?, ?, ?)
+        `
+
+        db.query(insertCommand, [user.email, user.usuario, user.senha], (error) => {
+            if(error) {
+                console.log(error)
+                return
+            }
+
+            response.json ({ message: "Usuário cadastrado com sucesso"})
+        })
+        
+    })
+    
+})
+
+app.listen(3000, () => {
+    console.log("Servidor rodando na porta 3000")
+})
+
+const db = mysql.createPool({
+    connectionLimit: 10,
+    host: DB_HOST,
+    database: DB_NAME,
+    user: DB_USER,
+    password: DB_PASSWORD
+})
