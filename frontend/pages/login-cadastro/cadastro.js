@@ -9,7 +9,7 @@ async function register () {
         senha
     }
 
-    const response = await fetch("http://localhost:3000/register", {
+    const response = await fetch("https://backend-sideralis.vercel.app/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
