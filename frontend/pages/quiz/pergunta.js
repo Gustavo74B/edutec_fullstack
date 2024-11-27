@@ -26,19 +26,26 @@ function montarPergunta() {
     if (perguntaIndex < quiz.perguntas.length) {
         main.innerHTML = `
             <div class="header">
-                <button class="sair" onclick="mostrarPopup()">SAIR</button>
+                <button class="sair">SAIR</button>
                 <span>Pergunta ${contador}/10</span>
             </div>
             <div class="question">
                 <p>${quiz.perguntas[perguntaIndex].pergunta}</p>
                 <div class="options">
                     ${quiz.perguntas[perguntaIndex].opcoes.map((opcao, index) => `
-                        <button class="option" onclick="selectOption(this)">${opcao}</button>
+                        <button class="option">${opcao}</button>
                     `).join('')}
                 </div>
             </div>
-            <button class="verify-button" onclick="handlerNext()">Verificar</button>
+            <button class="verify-button">Verificar</button>
         `;
+
+        // Adicionar eventos
+        document.querySelector('.sair').addEventListener('click', mostrarPopup);
+        document.querySelectorAll('.option').forEach(button =>
+            button.addEventListener('click', () => selectOption(button))
+        );
+        document.querySelector('.verify-button').addEventListener('click', handlerNext);
     } else {
         finalizar();
     }
