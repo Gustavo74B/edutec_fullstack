@@ -14,6 +14,7 @@ app.use(express.json())
 
 app.post("/register", (request, response) => {
     const user = request.body.user
+    console.log(user)
 
     const searchCommand = `
         SELECT * FROM Users
@@ -26,7 +27,7 @@ app.post("/register", (request, response) => {
             return
         }
 
-        if(data.lenght !== 0) {
+        if(data.length !== 0) {
             response.json({ message: "Email cadastrado em outra conta", userExists: true})
             return
         }
